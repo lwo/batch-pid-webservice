@@ -1,14 +1,3 @@
-* * * * *
-* Naam adapl: CONA_DC.ada
-* Type adapl: printadapl
-* Gekoppeld aan/behorend bij: collect.inf
-* Datum gemaakt: 9 oktober 2012
-* Naam programmeur: Lizzy Jongma
-* Opmerkingen/ beschrijving adapl:
-*     Export gegevens in CDWA achtig formaat tbv Open Data.
-*
-* * * * *
-
 * -----------------------------------------------------------
 * declaratie FACS bestand + variabelen
 * -----------------------------------------------------------
