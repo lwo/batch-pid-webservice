@@ -1,0 +1,74 @@
+<pids>
+    <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                      xmlns:pid="http://pid.socialhistoryservices.org/">
+        <soapenv:Body>
+            <pid:UpsertPidRequest>
+                <pid:na>12345</pid:na>
+                <pid:handle>
+                    <pid:pid>12345/TEST_RM0001.COLLECT.96</pid:pid>
+                    <pid:locAtt>
+                        <pid:location pid:href="http://localhost/collectie/BK-1991-30" pid:weight="1"/>
+                        <pid:location pid:href="http://localhost/collectie/BK-1991-30" pid:weight="0"
+                                      pid:view="collectie"/>
+                        <pid:location pid:href="http://localhost/media/assets/BK-1991-30" pid:weight="0"
+                                      pid:view="asset"/>
+                    </pid:locAtt>
+                </pid:handle>
+            </pid:UpsertPidRequest>
+        </soapenv:Body>
+    </soapenv:Envelope>
+    <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                      xmlns:pid="http://pid.socialhistoryservices.org/">
+        <soapenv:Body>
+            <pid:UpsertPidRequest>
+                <pid:na>12345</pid:na>
+                <pid:handle>
+                    <pid:pid>12345/TEST_RM0001.COLLECT.302</pid:pid>
+                    <pid:locAtt>
+                        <pid:location pid:href="http://localhost/collectie/AK-BR-BOU-6" pid:weight="1"/>
+                        <pid:location pid:href="http://localhost/collectie/AK-BR-BOU-6" pid:weight="0"
+                                      pid:view="collectie"/>
+                        <pid:location pid:href="http://localhost/media/assets/AK-BR-BOU-6" pid:weight="0"
+                                      pid:view="asset"/>
+                    </pid:locAtt>
+                </pid:handle>
+            </pid:UpsertPidRequest>
+        </soapenv:Body>
+    </soapenv:Envelope>
+    <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                      xmlns:pid="http://pid.socialhistoryservices.org/">
+        <soapenv:Body>
+            <pid:UpsertPidRequest>
+                <pid:na>12345</pid:na>
+                <pid:handle>
+                    <pid:pid>12345/TEST_RM0001.COLLECT.304</pid:pid>
+                    <pid:locAtt>
+                        <pid:location pid:href="http://localhost/collectie/AK-BR-BOU-1" pid:weight="1"/>
+                        <pid:location pid:href="http://localhost/collectie/AK-BR-BOU-1" pid:weight="0"
+                                      pid:view="collectie"/>
+                        <pid:location pid:href="http://localhost/media/assets/AK-BR-BOU-1" pid:weight="0"
+                                      pid:view="asset"/>
+                    </pid:locAtt>
+                </pid:handle>
+            </pid:UpsertPidRequest>
+        </soapenv:Body>
+    </soapenv:Envelope>
+    <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                      xmlns:pid="http://pid.socialhistoryservices.org/">
+        <soapenv:Body>
+            <pid:UpsertPidRequest>
+                <pid:na>12345</pid:na>
+                <pid:handle>
+                    <pid:pid>12345/TEST_RM0001.COLLECT.306</pid:pid>
+                    <pid:locAtt>
+                        <pid:location pid:href="http://localhost/collectie/AK-BR-BOU-2" pid:weight="1"/>
+                        <pid:location pid:href="http://localhost/collectie/AK-BR-BOU-2" pid:weight="0"
+                                      pid:view="collectie"/>
+                        <pid:location pid:href="http://localhost/media/assets/AK-BR-BOU-2" pid:weight="0"
+                                      pid:view="asset"/>
+                    </pid:locAtt>
+                </pid:handle>
+            </pid:UpsertPidRequest>
+        </soapenv:Body>
+    </soapenv:Envelope>
+</pids>
