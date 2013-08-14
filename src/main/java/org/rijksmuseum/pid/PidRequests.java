@@ -22,9 +22,11 @@ import java.util.HashMap;
  * Mass import of files into the index
  * <p/>
  * args:
- * 0=folder containing files;
- * 1=SOLR update endpoint with core, like http://localhost:8080/solr/all/update
- * 2=comma separated xslt stylesheets; 3=xslt parameters
+ * -f,--file = import document
+ * -e,--endpoint = PID webservice endpoint
+ * -k,--key = PID webservice key
+ * -s, --stylesheet = optional xslt stylesheet
+ * -p, --parameters = optional xslt stylesheet parameters.
  */
 public class PidRequests {
 
@@ -76,7 +78,6 @@ public class PidRequests {
             } else {
                 xsr.next();
             }
-            ;
         }
     }
 
@@ -99,7 +100,7 @@ public class PidRequests {
 
         final PostMethod post = new PostMethod(endpoint);
         final RequestEntity entity = new ByteArrayRequestEntity(record, "text/xml; charset=utf-8");
-        post.setRequestHeader("Authorization", "oauth " + key);
+        post.setRequestHeader("Authorization", "Bearer " + key);
         post.setRequestEntity(entity);
         log.info("Sending record number " + ++counter);
         if (log.isInfoEnabled()) write(record);

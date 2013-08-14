@@ -13,20 +13,6 @@ import java.net.URL;
 
 public class PidRequestTest {
 
-    /**
-     * To test, run with parameters
-     *
-     * @param args
-     */
-    @Ignore
-    public static void main(String[] args) throws Exception {
-
-        System.setProperty("environment", "test");
-        URL resource = PidRequestTest.class.getResource("/test.xml");
-        String[] argsv = new String[]{"--file", resource.getFile(), "--endpoint", "my url", "--key", "mykey", "-p", "a:a,b:b"};
-        PidRequests.main(argsv);
-    }
-
     @Test
     public void count() throws MalformedURLException, TransformerConfigurationException, FileNotFoundException, XMLStreamException {
 
@@ -36,4 +22,5 @@ public class PidRequestTest {
         pidRequests.process(xmlFile);
         Assert.assertEquals(4, pidRequests.getCounter());
     }
+
 }
