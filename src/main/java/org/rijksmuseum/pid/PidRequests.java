@@ -105,17 +105,23 @@ public class PidRequests {
         log.info("Sending record number " + ++counter);
         if (log.isInfoEnabled()) write(record);
 
-        while (true)
+        int sc = 0;
+        while (sc != 200)
             try {
-                httpclient.executeMethod(post);
+                sc = httpclient.executeMethod(post);
                 post.releaseConnection();
-                break;
             } catch (Exception e) {
                 post.releaseConnection();
                 log.error(e);
                 log.info("Will retry because of the last exception.");
                 sleep();
             }
+
+        if (sc != 200) {
+            log.info("Got response:");
+            String responseBodyAsString = post.getResponseBodyAsString(1000);
+            if (responseBodyAsString != null) write(responseBodyAsString.getBytes());
+        }
 
         if (sleep)
             if (counter % 1000 == 1) {
