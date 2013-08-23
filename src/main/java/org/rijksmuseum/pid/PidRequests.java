@@ -104,13 +104,18 @@ public class PidRequests {
         post.setRequestEntity(entity);
         log.info("Sending record number " + ++counter);
         if (log.isInfoEnabled()) write(record);
-        try {
-            httpclient.executeMethod(post);
-        } catch (Exception e) {
-            log.error(e);
-        } finally {
-            post.releaseConnection();
-        }
+
+        while (true)
+            try {
+                httpclient.executeMethod(post);
+                post.releaseConnection();
+                break;
+            } catch (Exception e) {
+                post.releaseConnection();
+                log.error(e);
+                log.info("Will retry because of the last exception.");
+                sleep();
+            }
 
         if (sleep)
             if (counter % 1000 == 1) {
